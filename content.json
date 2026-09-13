@@ -56,33 +56,9 @@
       ]
     },
     {
-      "id": "tutoring-policy",
-      "title": "Tutoring policy",
-      "description": "How should the tutor decide what to teach next?",
-      "tags": [
-        "Researching"
-      ]
-    },
-    {
-      "id": "teaching-interaction",
-      "title": "Teaching interaction",
-      "description": "What should the tutor do when the student is wrong, silent, overconfident or asks for the answer?",
-      "tags": [
-        "Researching"
-      ]
-    },
-    {
       "id": "motivation-and-engagement",
       "title": "Motivation and engagement",
       "description": "How does the tutor sustain effort without manufacturing dependence?",
-      "tags": [
-        "Researching"
-      ]
-    },
-    {
-      "id": "evaluation-and-governance",
-      "title": "Evaluation and human handoff",
-      "description": "How do we know the tutor is helping, and where should it stop?",
       "tags": [
         "Researching"
       ]
@@ -113,25 +89,29 @@
         "Research dump in progress.",
         "This note will cover personality beyond tone: stable values, relationship memory, coaching microbehaviours, boundaries, archetypes, attachment, safety and whether personality is actually a moat."
       ],
-      "contentUrl": "notes/personality.json"
+      "contentUrl": "notes/personality.json",
+      "topicId": "personality"
     },
     {
       "id": "diagnostic-engine",
       "tag": "Diagnostic engine",
       "question": "How should the diagnostic engine work?",
-      "contentUrl": "notes/diagnostic-engine.html"
+      "contentUrl": "notes/diagnostic-engine.html",
+      "topicId": "student-diagnosis"
     },
     {
       "id": "multimodal-content-engine",
       "tag": "Multimodal content",
       "question": "How should a multimodal content engine work?",
-      "contentUrl": "notes/multimodal-content.json"
+      "contentUrl": "notes/multimodal-content.json",
+      "topicId": "multimodal-content"
     },
     {
       "id": "ai-tutor-question-map",
       "tag": "Question map",
       "question": "The questions every AI tutor should answer",
-      "contentUrl": "notes/ai-tutor-question-map.json"
+      "contentUrl": "notes/ai-tutor-question-map.json",
+      "topicId": "questions-every-ai-tutor-should-answer"
     },
     {
       "id": "learner-model",
@@ -139,7 +119,8 @@
       "question": "What should a tutor know about the learner?",
       "answer": [
         "Research note in progress."
-      ]
+      ],
+      "topicId": "learner-model"
     },
     {
       "id": "knowledge-and-curriculum",
@@ -147,23 +128,8 @@
       "question": "What does a tutor need to know about the subject?",
       "answer": [
         "Research note in progress."
-      ]
-    },
-    {
-      "id": "tutoring-policy",
-      "tag": "Researching",
-      "question": "How should a tutor decide what to teach next?",
-      "answer": [
-        "Research note in progress."
-      ]
-    },
-    {
-      "id": "teaching-interaction",
-      "tag": "Researching",
-      "question": "How should a tutor teach?",
-      "answer": [
-        "Research note in progress."
-      ]
+      ],
+      "topicId": "knowledge-and-curriculum"
     },
     {
       "id": "motivation-and-engagement",
@@ -171,15 +137,8 @@
       "question": "How does a tutor keep a student going?",
       "answer": [
         "Research note in progress."
-      ]
-    },
-    {
-      "id": "evaluation-and-governance",
-      "tag": "Researching",
-      "question": "How do you know the tutor is working?",
-      "answer": [
-        "Research note in progress."
-      ]
+      ],
+      "topicId": "motivation-and-engagement"
     },
     {
       "id": "principles",
@@ -187,7 +146,8 @@
       "question": "Principles I am working from",
       "answer": [
         "Research note in progress."
-      ]
+      ],
+      "topicId": "principles"
     },
     {
       "id": "startup-moat",
@@ -195,7 +155,8 @@
       "question": "What is the startup moat as foundation models become powerful?",
       "answer": [
         "Research note in progress."
-      ]
+      ],
+      "topicId": "startup-moat"
     }
   ]
 }
