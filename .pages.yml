@@ -214,6 +214,10 @@ content:
             label: Topic tag
             type: string
             required: true
+          - name: topicId
+            label: Parent topic ID
+            type: string
+            required: true
           - name: question
             label: Question
             type: text
