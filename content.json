@@ -38,6 +38,70 @@
       "tags": [
         "Question map"
       ]
+    },
+    {
+      "id": "learner-model",
+      "title": "Learner model",
+      "description": "What should a tutor believe about a learner, and how should that belief change?",
+      "tags": [
+        "Researching"
+      ]
+    },
+    {
+      "id": "knowledge-and-curriculum",
+      "title": "Knowledge and curriculum model",
+      "description": "What does a tutor need to know about a subject before it can teach it?",
+      "tags": [
+        "Researching"
+      ]
+    },
+    {
+      "id": "tutoring-policy",
+      "title": "Tutoring policy",
+      "description": "How should the tutor decide what to teach next?",
+      "tags": [
+        "Researching"
+      ]
+    },
+    {
+      "id": "teaching-interaction",
+      "title": "Teaching interaction",
+      "description": "What should the tutor do when the student is wrong, silent, overconfident or asks for the answer?",
+      "tags": [
+        "Researching"
+      ]
+    },
+    {
+      "id": "motivation-and-engagement",
+      "title": "Motivation and engagement",
+      "description": "How does the tutor sustain effort without manufacturing dependence?",
+      "tags": [
+        "Researching"
+      ]
+    },
+    {
+      "id": "evaluation-and-governance",
+      "title": "Evaluation and human handoff",
+      "description": "How do we know the tutor is helping, and where should it stop?",
+      "tags": [
+        "Researching"
+      ]
+    },
+    {
+      "id": "principles",
+      "title": "Principles I am working from",
+      "description": "The commitments underneath the research and product decisions.",
+      "tags": [
+        "Researching"
+      ]
+    },
+    {
+      "id": "startup-moat",
+      "title": "The startup moat in a foundation-model world",
+      "description": "What remains valuable as the underlying models become more capable?",
+      "tags": [
+        "Researching"
+      ]
     }
   ],
   "questions": [
@@ -68,6 +132,70 @@
       "tag": "Question map",
       "question": "The questions every AI tutor should answer",
       "contentUrl": "notes/ai-tutor-question-map.json"
+    },
+    {
+      "id": "learner-model",
+      "tag": "Researching",
+      "question": "What should a tutor know about the learner?",
+      "answer": [
+        "Research note in progress."
+      ]
+    },
+    {
+      "id": "knowledge-and-curriculum",
+      "tag": "Researching",
+      "question": "What does a tutor need to know about the subject?",
+      "answer": [
+        "Research note in progress."
+      ]
+    },
+    {
+      "id": "tutoring-policy",
+      "tag": "Researching",
+      "question": "How should a tutor decide what to teach next?",
+      "answer": [
+        "Research note in progress."
+      ]
+    },
+    {
+      "id": "teaching-interaction",
+      "tag": "Researching",
+      "question": "How should a tutor teach?",
+      "answer": [
+        "Research note in progress."
+      ]
+    },
+    {
+      "id": "motivation-and-engagement",
+      "tag": "Researching",
+      "question": "How does a tutor keep a student going?",
+      "answer": [
+        "Research note in progress."
+      ]
+    },
+    {
+      "id": "evaluation-and-governance",
+      "tag": "Researching",
+      "question": "How do you know the tutor is working?",
+      "answer": [
+        "Research note in progress."
+      ]
+    },
+    {
+      "id": "principles",
+      "tag": "Researching",
+      "question": "Principles I am working from",
+      "answer": [
+        "Research note in progress."
+      ]
+    },
+    {
+      "id": "startup-moat",
+      "tag": "Researching",
+      "question": "What is the startup moat as foundation models become powerful?",
+      "answer": [
+        "Research note in progress."
+      ]
     }
   ]
 }
