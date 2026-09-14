@@ -17,22 +17,7 @@ actions:
       message: This will move all saved draft changes to the public website.
       button: Publish
 
-content:
-  - name: portfolio-home
-    label: Portfolio homepage
-    type: file
-    path: index.html
-    format: code
-    operations:
-      delete: false
 
-  - name: portfolio-projects
-    label: Portfolio projects
-    type: file
-    path: projects.html
-    format: code
-    operations:
-      delete: false
 
   - name: personality
     operations:
