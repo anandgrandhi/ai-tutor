@@ -1,8 +1,8 @@
 {
   "eyebrow": "Anand Grandhi / Working notes",
   "title": "Notes on building better AI tutors.",
-  "meta": "What research says, what companies are building, and what is still unsolved.<br>A public working map — not a finished theory.",
-  "intro": "A working notebook on the systems, decisions and evidence behind a complete AI tutor.",
+  "meta": "What research says, what companies are building, and what is still unsolved.<br>A  working map — still in progress.",
+  "intro": "I've spent years at edtech companies trying to build something close to a human tutor. We fell short, badly. It was like digging a mountain with a needle. That's changing now—for the first time, the tools might be good enough.\nMost people building AI tutors today start from the capability: we have AI, so let's use it to make a tutor. I think that's backwards. The question isn't what AI can do. It's what a good tutor does—the traits, the behavior, the relationship with a student—and only then whether AI can pull any of it off.\n\nThis is my first attempt at framing that. These are my notes from reading through the research. For each part of a tutor, I try to write down the same three things: what the research says, what companies are building, and what nobody has solved yet.\nIt isn't a specification and it doesn't propose an architecture. It's a map of the questions that seem most important when building AI tutors—not because there's one correct answer to any of them, but because ignoring them is how you end up with a generic tutor.\nI just started it. It's taking longer than I expected, and it'll keep evolving as I read more, build more, and learn from others working on this. If you're working on the same problems, I'd like to hear from you.\nYou can read the rough draft of the workbook here—or for the TLDR, the key questions are below.",
   "revised": "September 2026",
   "footer": "The tutor should change its methods until the student can think without it.",
   "defaultQuestion": "diagnostic-engine",
@@ -84,79 +84,79 @@
     {
       "id": "personality-ai-tutor",
       "tag": "Personality",
+      "topicId": "personality",
       "question": "Personality of an AI tutor",
+      "contentUrl": "notes/personality.json",
       "answer": [
         "Research dump in progress.",
         "This note will cover personality beyond tone: stable values, relationship memory, coaching microbehaviours, boundaries, archetypes, attachment, safety and whether personality is actually a moat."
-      ],
-      "contentUrl": "notes/personality.json",
-      "topicId": "personality"
+      ]
     },
     {
       "id": "diagnostic-engine",
       "tag": "Diagnostic engine",
+      "topicId": "student-diagnosis",
       "question": "How should the diagnostic engine work?",
-      "contentUrl": "notes/diagnostic-engine.html",
-      "topicId": "student-diagnosis"
+      "contentUrl": "notes/diagnostic-engine.html"
     },
     {
       "id": "multimodal-content-engine",
       "tag": "Multimodal content",
+      "topicId": "multimodal-content",
       "question": "How should a multimodal content engine work?",
-      "contentUrl": "notes/multimodal-content.json",
-      "topicId": "multimodal-content"
+      "contentUrl": "notes/multimodal-content.json"
     },
     {
       "id": "ai-tutor-question-map",
       "tag": "Question map",
+      "topicId": "questions-every-ai-tutor-should-answer",
       "question": "The questions every AI tutor should answer",
-      "contentUrl": "notes/ai-tutor-question-map.json",
-      "topicId": "questions-every-ai-tutor-should-answer"
+      "contentUrl": "notes/ai-tutor-question-map.json"
     },
     {
       "id": "learner-model",
       "tag": "Researching",
+      "topicId": "learner-model",
       "question": "What should a tutor know about the learner?",
       "answer": [
         "Research note in progress."
-      ],
-      "topicId": "learner-model"
+      ]
     },
     {
       "id": "knowledge-and-curriculum",
       "tag": "Researching",
+      "topicId": "knowledge-and-curriculum",
       "question": "What does a tutor need to know about the subject?",
       "answer": [
         "Research note in progress."
-      ],
-      "topicId": "knowledge-and-curriculum"
+      ]
     },
     {
       "id": "motivation-and-engagement",
       "tag": "Researching",
+      "topicId": "motivation-and-engagement",
       "question": "How does a tutor keep a student going?",
       "answer": [
         "Research note in progress."
-      ],
-      "topicId": "motivation-and-engagement"
+      ]
     },
     {
       "id": "principles",
       "tag": "Researching",
+      "topicId": "principles",
       "question": "Principles I am working from",
       "answer": [
         "Research note in progress."
-      ],
-      "topicId": "principles"
+      ]
     },
     {
       "id": "startup-moat",
       "tag": "Researching",
+      "topicId": "startup-moat",
       "question": "What is the startup moat as foundation models become powerful?",
       "answer": [
         "Research note in progress."
-      ],
-      "topicId": "startup-moat"
+      ]
     }
   ]
 }
