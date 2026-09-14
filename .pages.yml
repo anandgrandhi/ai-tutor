@@ -35,6 +35,8 @@ content:
       delete: false
 
   - name: personality
+    operations:
+      delete: true
     label: Personality
     type: file
     path: notes/personality.json
@@ -79,6 +81,8 @@ content:
           rename: safe
 
   - name: multimodal-content
+    operations:
+      delete: true
     label: Multimodal content
     type: file
     path: notes/multimodal-content.json
@@ -123,6 +127,8 @@ content:
           rename: safe
 
   - name: ai-tutor-question-map
+    operations:
+      delete: true
     label: AI tutor question map
     type: file
     path: notes/ai-tutor-question-map.json
@@ -167,6 +173,8 @@ content:
           rename: safe
 
   - name: tutor-notes
+    operations:
+      delete: false
     label: Notes index
     type: file
     path: content.json
