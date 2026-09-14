@@ -17,8 +17,7 @@ actions:
       message: This will move all saved draft changes to the public website.
       button: Publish
 
-
-
+content:
   - name: personality
     operations:
       delete: true
