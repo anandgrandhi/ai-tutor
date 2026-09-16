@@ -34,7 +34,6 @@
     {
       "id": "student-diagnosis",
       "title": "Student diagnosis",
-      "description": "Before teaching, what should the tutor believe about the learner — and how should it update that belief?",
       "tags": [
         "Diagnostic engine"
       ]
