@@ -96,7 +96,7 @@
       "tag": "Diagnostic engine",
       "topicId": "student-diagnosis",
       "question": "How should the diagnostic engine work?",
-      "contentUrl": "notes/diagnostic-engine.html"
+      "contentUrl": "notes/diagnostic-engine.json"
     },
     {
       "id": "multimodal-content-engine",
