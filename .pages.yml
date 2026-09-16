@@ -64,6 +64,52 @@ content:
           categories: [image]
           rename: safe
 
+  - name: student-diagnosis
+    operations:
+      delete: true
+    label: Student diagnosis
+    type: file
+    path: notes/diagnostic-engine.json
+    format: json
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+      - name: status
+        label: Status
+        type: select
+        options:
+          values: [Researching, Draft, Ready]
+      - name: updated
+        label: Updated
+        type: string
+      - name: accent
+        label: Highlight colour
+        type: select
+        options:
+          values:
+            - name: blue
+              label: Blue
+            - name: yellow
+              label: Yellow
+            - name: pink
+              label: Pink
+            - name: green
+              label: Green
+      - name: body
+        label: Note
+        type: rich-text
+        required: true
+        options:
+          format: html
+          switcher: true
+          media: content_images
+          path: student-diagnosis
+          extensions: [jpg, jpeg, png, webp, gif]
+          categories: [image]
+          rename: safe
+
   - name: multimodal-content
     operations:
       delete: true
