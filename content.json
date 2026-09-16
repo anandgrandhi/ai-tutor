@@ -8,19 +8,19 @@
   "defaultQuestion": "diagnostic-engine",
   "topics": [
     {
+      "id": "questions-every-ai-tutor-should-answer",
+      "title": "The questions every AI tutor should answer",
+      "description": "A working map of the questions behind a complete AI tutor.",
+      "tags": [
+        "Question map"
+      ]
+    },
+    {
       "id": "personality",
       "title": "Personality of an AI tutor",
       "description": "What should remain stable in the tutor, and what should change with the learner and the moment?",
       "tags": [
         "Personality"
-      ]
-    },
-    {
-      "id": "student-diagnosis",
-      "title": "Student diagnosis",
-      "description": "Before teaching, what should the tutor believe about the learner — and how should it update that belief?",
-      "tags": [
-        "Diagnostic engine"
       ]
     },
     {
@@ -32,11 +32,11 @@
       ]
     },
     {
-      "id": "questions-every-ai-tutor-should-answer",
-      "title": "The questions every AI tutor should answer",
-      "description": "A working map of the questions behind a complete AI tutor.",
+      "id": "student-diagnosis",
+      "title": "Student diagnosis",
+      "description": "Before teaching, what should the tutor believe about the learner — and how should it update that belief?",
       "tags": [
-        "Question map"
+        "Diagnostic engine"
       ]
     },
     {
