@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Working notes on tutor personality, trust and relationship in AI tutoring.">
+  <title>Tutor personality, trust & relationship — Anand Grandhi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --blue:#0b63ff;
+      --ink:#34384c;
+      --muted:#6f7485;
+      --faint:#9aa0ad;
+      --line:#e3e6ec;
+      --paper:#fff;
+      --panel:#f7f8fb;
+    }
+    *{box-sizing:border-box}
+    html{background:var(--paper);scroll-behavior:smooth}
+    body{
+      margin:0;
+      color:var(--ink);
+      background:var(--paper);
+      font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      font-size:16px;
+      line-height:1.68;
+      -webkit-font-smoothing:antialiased;
+    }
+    a{color:inherit}
+    .topbar{
+      display:inline-flex;
+      margin:12px 0 0 12px;
+      background:rgba(255,255,255,.94);
+      border-radius:7px;
+      overflow:hidden;
+    }
+    .mark,.back-link{
+      display:grid;
+      min-height:56px;
+      place-items:center;
+      text-decoration:none;
+    }
+    .mark{
+      width:70px;
+      color:var(--blue);
+      font-size:22px;
+      font-weight:500;
+      letter-spacing:-.08em;
+    }
+    .back-link{
+      padding:0 22px 0 18px;
+      color:var(--muted);
+      font-size:13px;
+    }
+    .back-link:hover,.back-link:focus-visible{color:var(--blue)}
+    main{max-width:900px;padding:108px 48px 120px}
+    .eyebrow{
+      margin:0 0 34px;
+      color:var(--muted);
+      font-size:12px;
+    }
+    h1{
+      max-width:820px;
+      margin:0;
+      font-size:clamp(40px,5vw,62px);
+      font-weight:400;
+      letter-spacing:-.055em;
+      line-height:1.06;
+    }
+    .dek{
+      max-width:690px;
+      margin:30px 0 78px;
+      color:var(--muted);
+      font-size:16px;
+      line-height:1.72;
+    }
+    .notes{
+      max-width:760px;
+      border-top:1px solid var(--line);
+      padding-top:18px;
+    }
+    .notes h2{
+      margin:48px 0 12px;
+      font-size:21px;
+      font-weight:500;
+      letter-spacing:-.025em;
+      line-height:1.28;
+    }
+    .notes h2:first-child{margin-top:18px}
+    .notes p{margin:10px 0}
+    .notes strong{font-weight:500;color:#11182a}
+    .notes ul{margin:10px 0 14px;padding-left:22px}
+    .notes li{margin:5px 0}
+    .question{
+      margin:18px 0;
+      padding:14px 0 14px 18px;
+      border-left:2px solid var(--blue);
+      font-size:17px;
+      line-height:1.6;
+    }
+    .pair{
+      margin:12px 0 18px;
+      padding:12px 14px;
+      background:var(--panel);
+    }
+    .pair div+div{margin-top:8px}
+    .resources{
+      max-width:760px;
+      margin-top:72px;
+      border-top:1px solid var(--line);
+    }
+    .resources-title{
+      margin:26px 0 8px;
+      font-size:26px;
+      font-weight:400;
+      letter-spacing:-.035em;
+    }
+    .resources-intro{
+      margin:0 0 22px;
+      color:var(--muted);
+      font-size:14px;
+    }
+    details{
+      border-top:1px solid var(--line);
+    }
+    details:last-child{border-bottom:1px solid var(--line)}
+    summary{
+      display:grid;
+      grid-template-columns:minmax(0,1fr) auto;
+      gap:18px;
+      align-items:center;
+      min-height:70px;
+      cursor:pointer;
+      list-style:none;
+      font-size:16px;
+      font-weight:500;
+    }
+    summary::-webkit-details-marker{display:none}
+    summary::after{
+      content:"+";
+      color:var(--faint);
+      font-size:22px;
+      font-weight:400;
+      transition:transform 160ms ease;
+    }
+    details[open] summary::after{
+      content:"–";
+      color:var(--blue);
+    }
+    summary:hover,summary:focus-visible{color:var(--blue)}
+    summary:focus-visible{outline:2px solid var(--blue);outline-offset:4px}
+    .drop-content{
+      padding:0 0 28px;
+    }
+    .resource{
+      padding:13px 0;
+      border-top:1px solid #eef0f4;
+    }
+    .resource:first-child{border-top:0}
+    .resource a{
+      color:var(--blue);
+      text-decoration:none;
+      text-underline-offset:3px;
+    }
+    .resource a:hover{text-decoration:underline}
+    .resource p{
+      margin:5px 0 0;
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.58;
+    }
+    .watchlist{
+      margin:0;
+      padding-left:20px;
+    }
+    .watchlist li{
+      margin:9px 0;
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.55;
+    }
+    .closing{
+      max-width:760px;
+      margin-top:62px;
+      padding-top:24px;
+      border-top:1px solid var(--line);
+      font-size:19px;
+      line-height:1.55;
+    }
+    .closing strong{
+      display:block;
+      margin-top:12px;
+      font-weight:500;
+      color:var(--ink);
+    }
+    @media(max-width:650px){
+      .topbar{margin:8px 0 0 8px}
+      .mark{width:58px}
+      .back-link{padding-inline:16px}
+      main{padding:78px 24px 86px}
+      .dek{margin-bottom:58px}
+      .notes h2{margin-top:42px}
+    }
+  </style>
+</head>
+<body>
+  <nav class="topbar" aria-label="Primary">
+    <a class="mark" href="index.html" aria-label="Back to Anand Grandhi home">A.</a>
+    <a class="back-link" href="index.html">Building better AI tutors</a>
+  </nav>
+
+  <main>
+    <p class="eyebrow">Working notes · Tutor relationship</p>
+    <h1>Tutor personality, trust &amp; relationship</h1>
+    <p class="dek">Notes I’m keeping while thinking about what kind of relationship an AI tutor should have with a learner — especially over months or years.</p>
+
+    <article class="notes">
+      <p>I keep coming back to the fact that students are not using a tutor just to understand a concept. They are usually trying to achieve something — clear an exam, become good at something, recover from falling behind, build confidence, or eventually become independent.</p>
+
+      <p>That makes me wonder whether the relationship model should be closer to a <strong>coach–athlete relationship</strong> than a generic “friendly assistant.”</p>
+
+      <p>Learning is hard. A good coach is not always comfortable. They encourage, but also push, correct, set standards, know when to back off, and keep the larger goal visible when the learner is frustrated. Sports psychology and coach–athlete relationships may have more to teach us here than chatbot personality design.</p>
+
+      <p>I also want to look at the <strong>hero’s journey</strong> frame. If the learner is pursuing a difficult goal, the tutor is not the hero. The learner is. The tutor is closer to the guide, mentor or coach who helps them cross difficult stages without taking over the journey.</p>
+
+      <h2>What archetype fits?</h2>
+      <p>Should the tutor feel like a <strong>teacher, coach, mentor, friend, older sibling</strong>, or even something closer to a <strong>parental archetype</strong> in some situations?</p>
+
+      <p>The teacher archetype gives authority and knowledge, but can create distance.</p>
+      <p>The friend archetype may make it easier to admit confusion and ask stupid questions, but can weaken authority or make disagreement harder.</p>
+      <p>The coach archetype is interesting because challenge is expected. A coach can say “you can do better than this” without necessarily damaging the relationship.</p>
+      <p>The mentor archetype may work better over years — someone who remembers where you started, understands what you are trying to become, and gradually expects more from you.</p>
+      <p>The parental archetype is more complicated. Patience, protection and unconditional support are useful qualities, but dependency and authority become much more sensitive.</p>
+
+      <p>I want to revisit <strong>Jungian archetypes</strong> for this reason — not because I think an AI tutor should literally be assigned a Jungian archetype, but because archetypes may be a useful language for thinking about the relationship the tutor is implicitly creating.</p>
+
+      <p>Fictional teachers and mentors are interesting too. <em>Kung Fu Panda</em> is a simple example: Shifu does not teach Po the way he teaches everyone else. The method changes once he understands what motivates him. There is something useful there about adapting the teaching relationship without the teacher becoming a completely different character.</p>
+
+      <h2>Stable personality, flexible role?</h2>
+      <p>My current instinct is that the tutor needs a stable core, but the role can change.</p>
+      <div class="question"><strong>Stable commitments, flexible expression.</strong></div>
+      <p>Honesty, respect, patience, learner autonomy, epistemic honesty and willingness to disagree should probably remain stable.</p>
+      <p>But directness, warmth, emotional expressiveness, pacing, challenge, question frequency and whether the tutor behaves more like a teacher, coach or Socratic partner can change with the situation.</p>
+      <p>The same tutor could be more coach-like when the learner is avoiding work, more teacher-like when introducing something difficult, more Socratic when the learner already knows enough to reason through it, and more restrained when the learner needs to struggle independently.</p>
+      <p>That feels more robust than creating a collection of personas — “strict coach”, “friendly teacher”, “wise mentor” — and switching characters.</p>
+
+      <h2>Personality is not the same as pedagogy</h2>
+      <p>A tutor could have a calm, dry, understated personality and still be demanding, supportive and Socratic.</p>
+      <p>This is where the <strong>Big Five</strong> might be useful. Instead of designing a cartoon persona, could we describe the tutor on more stable trait dimensions?</p>
+      <p>How agreeable should it be? How assertive? How emotionally expressive? How conscientious? How curious?</p>
+      <p>And should any of those traits adapt to the learner?</p>
+      <p>I am not convinced personality matching is necessarily desirable.</p>
+      <p>An anxious learner may not benefit from an anxious mirror. Someone who avoids challenge may not need maximum agreeableness. An overconfident learner may benefit from more contradiction and verification. A discouraged learner may need confidence-building without praise inflation.</p>
+      <div class="pair">
+        <div><strong>Who the tutor is</strong></div>
+        <div>vs.</div>
+        <div><strong>what the learner needs from the tutor right now.</strong></div>
+      </div>
+      <p>Preference matching is not necessarily the same thing as learning optimisation.</p>
+
+      <h2>What does “coach-like” actually mean?</h2>
+      <p>I want to get away from prompts such as “You are an inspiring sports coach.”</p>
+      <p>What does that personality translate to behaviourally?</p>
+      <ul>
+        <li>more direct correction;</li>
+        <li>fewer generic compliments;</li>
+        <li>stronger reference to the learner’s goal;</li>
+        <li>more accountability;</li>
+        <li>calibrated challenge;</li>
+        <li>less willingness to reveal answers;</li>
+        <li>greater tolerance for silence and independent effort;</li>
+        <li>explicit naming of avoidance;</li>
+        <li>different timing of encouragement;</li>
+        <li>remembering commitments from previous sessions.</li>
+      </ul>
+      <p>Personality should probably eventually be expressed as behavioural policy, not adjectives in a system prompt.</p>
+
+      <h2>Working alliance might be a better frame than likability</h2>
+      <p>I want to look properly at <strong>Bordin’s working alliance</strong> — bond, goals and tasks — and at coach–athlete relationship research.</p>
+      <p>It feels unusually relevant to tutoring.</p>
+      <div class="question">Maybe a good tutor relationship is not “I like this tutor,” but: I trust this tutor. It understands what I am trying to achieve. We agree on what I need to work on. I understand why it is asking me to do this particular thing.</div>
+
+      <h2>Trust should probably be calibrated, not maximised</h2>
+      <p>The question is not simply whether the learner trusts the tutor.</p>
+      <p>It is whether the learner trusts the tutor <strong>as much as it deserves</strong>.</p>
+      <p>A tutor can be warm, fluent and confident while being wrong.</p>
+      <p>So a trustworthy tutor may need to expose uncertainty, admit mistakes, distinguish evidence from inference, explain why a recommendation changed, and make it easy for the learner to disagree.</p>
+      <p>A tutor that feels trustworthy but cannot communicate its limits may be more dangerous than one that occasionally says “I’m not sure.”</p>
+      <p>The goal is not maximum trust. It is <strong>appropriate reliance</strong>.</p>
+
+      <h2>Warmth is useful. Maximising warmth probably isn't.</h2>
+      <p>A student should feel comfortable saying “I don’t understand.”</p>
+      <p>But excessive warmth can easily become praise inflation, avoidance of disagreement or sycophancy.</p>
+      <p>Sometimes the right tutor response is: “You understand the first part, but this step is wrong.” Or: “You’re trying to skip the difficult part.” Or: “I don’t think another explanation will help yet. Try this first.”</p>
+      <p>That can still be supportive.</p>
+      <p>I want to look more closely at the <strong>warmth × competence</strong> frame. Maybe the ideal tutor is not maximally warm. Maybe it is appropriately warm, highly competent and calibrated to the moment.</p>
+
+      <h2>Sycophancy seems especially dangerous in tutoring</h2>
+      <p>In a normal chatbot, excessive agreement is irritating. In tutoring, it can corrupt the learning process.</p>
+      <p>If the learner gives faulty reasoning and the tutor validates it to preserve rapport, that is a fundamental failure.</p>
+      <div class="question">The tutor has to protect the relationship <strong>without protecting the learner from being wrong</strong>.</div>
+
+      <h2>When should the tutor intervene?</h2>
+      <p>Proactivity is another unresolved area.</p>
+      <p>Should the tutor interrupt when it detects a misconception? Notice that the learner has tried the same strategy three times? Call out that they are avoiding practice? Suggest stopping for the day?</p>
+      <p>Too passive and it becomes a search box. Too proactive and it becomes annoying, controlling or surveillance-like.</p>
+      <p>Maybe proactive interventions should often look more like:</p>
+      <div class="question">“You’ve tried the same approach twice. Want a hint, a different representation, or another attempt without help?”</div>
+      <p>The tutor is still active, but the learner retains agency.</p>
+
+      <h2>Emotion should serve learning, not engagement</h2>
+      <p>Affective tutoring is interesting, but I want to be careful here.</p>
+      <p>If the system detects frustration, what should it actually do? Reduce difficulty? Give a hint? Ask where the confusion begins? Encourage the learner to persist? Suggest a break?</p>
+      <p>Frustration itself is not necessarily a problem. Some struggle is part of learning.</p>
+      <div class="question">Is this emotion telling us something that should change the instructional decision?</div>
+      <p>That feels more useful than simply asking how to make the learner feel better.</p>
+
+      <h2>Relationship memory</h2>
+      <p>If the same tutor stays with someone for years, what should it remember about the relationship?</p>
+      <p>Not just “prefers diagrams,” but potentially what kind of encouragement works, when they tend to give up, what kinds of challenge they respond to, how their confidence has changed, what goals they once had, which failures mattered, how much support they used to need, and what they have gradually become capable of.</p>
+      <p>There may be a useful distinction between <strong>learning memory</strong> and <strong>relationship memory</strong>.</p>
+      <p>“Frequently confuses velocity and acceleration” is learning memory.</p>
+      <p>“After repeated failure, tends to stop attempting unless encouraged” is much more personal.</p>
+      <p>If we store that kind of information, it probably needs to be visible, editable, explainable and easy for the learner to remove.</p>
+
+      <h2>How human should the tutor feel?</h2>
+      <p>I also want to look at the older <strong>relational-agent</strong>, social-presence and “computers are social actors” research.</p>
+      <p>Humans already assign personality, intention, warmth and fairness to fairly simple software. Voice, persistent memory and years of interaction will amplify that considerably.</p>
+      <p>So maybe the target is not to make the tutor maximally human.</p>
+      <p>Maybe it needs enough social presence for trust, continuity and motivation — without encouraging false beliefs about what the system actually is.</p>
+
+      <h2>Dependence is probably the uncomfortable part</h2>
+      <p>If a tutor becomes extremely good at making a learner feel understood, the relationship itself can become valuable. That creates obvious product incentives. Attached users may return more.</p>
+      <p>But educational success may eventually require the opposite.</p>
+      <p>Could the learner begin optimizing for the tutor’s approval? Could the tutor become a substitute for teachers, friends or parents? Could a company deliberately optimise attachment because it improves retention?</p>
+      <p>What happens if the tutor's personality or memory changes after the learner has spent five years with it?</p>
+      <p>My current instinct is that the relationship should ultimately make the tutor <strong>less necessary</strong>.</p>
+      <p>A good tutor should make the learner better at thinking alone, checking their own work, recognizing confusion, finding resources, asking precise questions, tolerating difficulty and learning without constant support.</p>
+      <p>Maybe <strong>healthy independence</strong> should actually be an outcome we measure:</p>
+      <ul>
+        <li>more attempts before asking for help;</li>
+        <li>better self-explanation;</li>
+        <li>better confidence calibration;</li>
+        <li>more willingness to challenge the tutor;</li>
+        <li>better transfer to unfamiliar problems;</li>
+        <li>lower dependence on step-by-step assistance.</li>
+      </ul>
+      <p>The relationship can deepen while dependency decreases.</p>
+    </article>
+
+    <section class="resources">
+      <h2 class="resources-title">Things I’m looking at</h2>
+      <p class="resources-intro">Research, products and loose ends I’m using to think through the questions above.</p>
+
+      <details>
+        <summary>Research papers</summary>
+        <div class="drop-content">
+          <div class="resource"><a href="https://arxiv.org/abs/2502.08177" target="_blank" rel="noreferrer">SycEval ↗</a><p>Sycophancy; useful for thinking about when maintaining agreement starts damaging epistemic honesty.</p></div>
+          <div class="resource"><a href="https://www.ida.liu.se/divisions/hcs/seminars/cogsciseminars/Papers/dmello-TiiS12.pdf" target="_blank" rel="noreferrer">AutoTutor and Affective AutoTutor ↗</a><p>Older work, but interesting because tutoring, dialogue and affect were being studied well before LLMs.</p></div>
+          <div class="resource"><a href="https://arxiv.org/abs/2212.10346" target="_blank" rel="noreferrer">When proactive tutoring harms trust ↗</a><p>Useful for the question of when stepping in helps versus when intervention itself damages trust.</p></div>
+          <div class="resource"><a href="https://learninganalytics.upenn.edu/ryanbaker/BDRG-IJHCS-Final.pdf" target="_blank" rel="noreferrer">Better to Be Frustrated than Bored ↗</a><p>A useful counterpoint to the instinct that a tutor should always eliminate negative emotion.</p></div>
+          <div class="resource"><a href="https://arxiv.org/pdf/2507.06878" target="_blank" rel="noreferrer">Do AI tutors empower or enslave learners? ↗</a><p>Autonomy, agency and dependence.</p></div>
+          <div class="resource"><a href="https://dl.acm.org/doi/10.1145/3772318.3790608" target="_blank" rel="noreferrer">Creating and Evaluating Personas Using Generative AI ↗</a><p>Useful for thinking more rigorously about persona design rather than treating it as prompt-writing.</p></div>
+        </div>
+      </details>
+
+      <details>
+        <summary>Interesting readings / things to look into</summary>
+        <div class="drop-content">
+          <div class="resource"><strong>Bordin’s working alliance</strong><p>Bond, goals, tasks.</p></div>
+          <div class="resource"><strong>Coach–athlete relationship research</strong><p>Probably one of the more useful analogies for goal-driven learning.</p></div>
+          <div class="resource"><strong>Sports psychology</strong><p>Motivation, confidence, persistence, accountability, response to failure and coach behaviour.</p></div>
+          <div class="resource"><strong>Big Five personality models</strong><p>Potentially more useful than designing cartoon personas.</p></div>
+          <div class="resource"><strong>Jungian archetypes</strong><p>Teacher, mentor, coach, friend, parent, guide. Not sure yet whether archetypes are necessary, but useful to think with.</p></div>
+          <div class="resource"><strong>Relational agents / social presence / Computers Are Social Actors</strong><p>Long-running research on how humans form social expectations toward software.</p></div>
+          <div class="resource"><strong>Trust in automation / trust calibration</strong><p>Particularly the difference between creating trust and deserving trust.</p></div>
+          <div class="resource"><strong>Motivational interviewing</strong><p>Interesting for autonomy, ambivalence and helping someone generate their own reasons to act rather than pushing motivation onto them.</p></div>
+          <div class="resource"><strong>Alliance rupture and repair</strong><p>What happens when the tutor gets something wrong, pushes too hard or makes the learner feel misunderstood?</p></div>
+          <div class="resource"><strong>Teacher and mentor archetypes in stories</strong><p><em>Kung Fu Panda</em> is a surprisingly useful example of adapting the method to the learner without changing the teacher's underlying identity.</p></div>
+        </div>
+      </details>
+
+      <details>
+        <summary>Companies / products</summary>
+        <div class="drop-content">
+          <div class="resource"><a href="https://personalityai.ai/" target="_blank" rel="noreferrer">PersonalityAI ↗</a><p>Explicit personality modelling and interpersonal adaptation.</p></div>
+          <div class="resource"><a href="https://www.hume.ai/" target="_blank" rel="noreferrer">Hume ↗</a><p>Expressive voice, affect and emotionally responsive interaction.</p></div>
+          <div class="resource"><strong>Khanmigo</strong><p>Interesting for maintaining a guided/Socratic stance instead of behaving like a generic assistant.</p></div>
+          <div class="resource"><strong>Eedi</strong><p>Worth looking at for the relational behaviour created by Socratic tutoring and misconception-driven questioning.</p></div>
+          <div class="resource"><strong>Ello</strong><p>Child-facing interaction; encouragement, reading support and the boundary between helping and over-helping.</p></div>
+          <div class="resource"><strong>Duolingo Max</strong><p>Character consistency and roleplay without making the entire product relationship-driven.</p></div>
+          <div class="resource"><strong>BetterUp / CoachHub</strong><p>Useful adjacent products for thinking about coaching relationships, goals and accountability.</p></div>
+          <div class="resource"><strong>Character.AI / Replika</strong><p>Mainly warning cases around attachment, personality persistence and what happens when a long-term agent changes.</p></div>
+        </div>
+      </details>
+
+      <details>
+        <summary>Current trends / questions I’m watching</summary>
+        <div class="drop-content">
+          <ul class="watchlist">
+            <li>Voice making tutors considerably more socially present than text-only systems.</li>
+            <li>Persistent memory turning isolated tutoring sessions into relationships.</li>
+            <li>Tutor personality moving from prompt-writing toward explicit behavioural policies.</li>
+            <li>Sycophancy becoming an educational-quality problem.</li>
+            <li>More products trying to detect emotion, confidence or motivation from behavioural signals.</li>
+            <li>Personality adaptation versus stereotyping.</li>
+            <li>Stable tutor identity versus flexible roles.</li>
+            <li>Relationship memory and what a tutor should be allowed to remember.</li>
+            <li>Whether stronger attachment produces better learning or simply better product retention.</li>
+            <li>How tutor behaviour should change as the learner becomes more capable.</li>
+            <li>Whether learners should choose the tutor's personality or whether the tutor should adapt it.</li>
+            <li>How transparent personality adaptation should be.</li>
+            <li>Whether an AI tutor should ever deliberately create emotional attachment.</li>
+            <li>What happens when a long-term tutor changes model, memory or personality.</li>
+            <li>Whether healthy independence should be treated as a core product metric.</li>
+          </ul>
+        </div>
+      </details>
+    </section>
+
+    <div class="closing">
+      The question I keep coming back to is not really:
+      <strong>What personality should an AI tutor have?</strong>
+      <br>
+      It is:
+      <strong>What kind of relationship helps this learner become capable of achieving the goal — and eventually needing less help to do it?</strong>
+    </div>
+  </main>
+</body>
+</html>
